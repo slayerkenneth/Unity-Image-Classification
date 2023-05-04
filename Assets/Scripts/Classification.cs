@@ -21,7 +21,7 @@ public class Classification : MonoBehaviour
     public Preprocess preprocess;
     public Text uiText;
 
-    string[] labels;
+    public string[] labels;
     IWorker worker;
 
     void Start()
