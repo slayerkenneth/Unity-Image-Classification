@@ -11,6 +11,8 @@ public class UserOverlay : MonoBehaviour
 
     public GameObject StartButton;
 
+    public GameObject MissionOverlay;
+    
     public GameObject MissionButton;
     
     string mainpagetitle = "Second Language\nWith AR";
@@ -32,12 +34,15 @@ public class UserOverlay : MonoBehaviour
         background.SetActive(sw);
         StartButton.SetActive(sw);
         MissionButton.SetActive(sw);
+        if (sw) MissionOverlay.SetActive(false);
     }
 
     public void SetMissionPage(bool sw)
     {
         title.GetComponent<Text>().text = "Mission!";
+        if (sw) MissionOverlay.SetActive(true);
         StartButton.SetActive(!sw);
         MissionButton.SetActive(!sw);
+        MissionOverlay.SetActive(sw);
     }
 }

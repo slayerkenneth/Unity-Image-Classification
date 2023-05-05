@@ -9,6 +9,12 @@ public class hardcoder : MonoBehaviour
 
     public string GetHardcodedTextContent()
     {
-        return hardcodeTextContent[count % hardcodeTextContent.Capacity];
+        count++;
+        return hardcodeTextContent[(count - 1)% hardcodeTextContent.Capacity];
+    }
+
+    public int GetCount()
+    {
+        return count;
     }
 }

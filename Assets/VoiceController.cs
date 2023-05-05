@@ -36,8 +36,7 @@ public class VoiceController : MonoBehaviour
     public void SetSpeak()
     {
         if (!speakerActive)
-        {
-            UpdateSpeakContent();
+        { 
             OnSpeakStart(); 
         }
         
@@ -51,6 +50,7 @@ public class VoiceController : MonoBehaviour
     public void UpdateSpeakContent()
     {
         content = Hardcoder.GetHardcodedTextContent();
+        infoText.text = content;
     }
 
     void OnSpeakStart()
